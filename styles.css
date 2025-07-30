@@ -1,0 +1,32 @@
+/* Navbar ke main container ke liye style */
+.navbar {
+  /* Yeh aapki image wala dark blue-gray background color hai */
+  background-color: #2A3B4D; 
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-family: Arial, sans-serif;
+}
+
+/* "BusBooking" link ke liye style */
+.navbar-brand {
+  color: #ffffff !important; /* Text ko hamesha safed rakhega */
+  font-weight: 600; /* Text ko bold banata hai */
+  font-size: 1.2rem; /* Thoda sa bada font size */
+}
+
+/* "Login" link ke liye style */
+.nav-link {
+  color: #ffffff !important; /* Text ko hamesha safed rakhega */
+  font-weight: 500;
+}
+
+/* Icon (bus aur arrow) aur text ko ek line mein aasan se align karne ke liye */
+.navbar-brand, .nav-link {
+  display: flex;
+  align-items: center;
+}
+
+/* Hover karne par link ka color na badle, safed hi rahe */
+.nav-link:hover {
+  color: #ffffff !important; 
+}

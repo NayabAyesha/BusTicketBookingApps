@@ -1,0 +1,50 @@
+<!-- src/app/components/search/search.component.html -->
+
+<div class="search-container">
+  <div class="booking-card">
+
+    <!-- Card Header -->
+    <h2 class="text-center mb-4">
+      <i class="fa fa-pencil-square-o me-2"></i>Book Your Bus Ticket
+    </h2>
+
+    <!-- Booking Form -->
+    <form (ngSubmit)="onSearch()" class="booking-form">
+      <div class="row g-3">
+        <!-- From Input -->
+        <div class="col-md-6">
+          <label for="fromCity" class="form-label">
+            <i class="fa fa-map-marker me-2"></i>From
+          </label>
+          <input type="text" class="form-control form-control-lg" id="fromCity" name="fromCity"  [(ngModel)]="searchQuery.fromCity" placeholder="Enter source city" required>
+        </div>
+
+        <!-- To Input -->
+        <div class="col-md-6">
+          <label for="toCity" class="form-label">
+            <i class="fa fa-map-marker me-2"></i>To
+          </label>
+          <input type="text" class="form-control form-control-lg" id="toCity" name="toCity" [(ngModel)] = "searchQuery.toCity" placeholder="Enter destination city" required>
+        </div>
+
+        <!-- Date of Journey Input -->
+        <div class="col-12">
+          <label for="journeyDate" class="form-label">
+            <i class="fa fa-calendar me-2"></i>Date of Journey
+          </label>
+          <!-- Note: Using type="text" to match the placeholder. 
+               For a real app, type="date" is better. -->
+          <input type="text" class="form-control form-control-lg" id="journeyDate" name="journeyDate"  [(ngModel)] ="searchQuery.journeyDate" placeholder="dd-mm-yyyy" onfocus="(this.type='date')" onblur="(this.type='text')" required>
+        </div>
+
+        <!-- Search Button -->
+        <div class="col-12 d-grid mt-4">
+          <button type="submit" class="btn search-btn btn-lg">
+            <i class="fa fa-search me-2"></i>Search Buses
+          </button>
+        </div>
+      </div>
+    </form>
+
+  </div>
+</div>

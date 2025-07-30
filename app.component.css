@@ -1,0 +1,42 @@
+/* src/app/components/navbar/navbar.component.css */
+.custom-navbar {
+  /* The dark blue-gray background color from your image */
+  background-color: #607c7c;
+  padding: 15px 20px; /* Add some padding around the content */
+  font-family: Arial, sans-serif;
+}
+
+/* Style for all links inside the navbar */
+.custom-navbar a {
+  color: white;
+  text-decoration: underline; /* Adds underline to both links */
+}
+
+/* Style for the "BusBooking" link */
+.brand-link {
+  font-weight: bold;
+  font-size: 1.2rem;
+  display: block; /* Makes it take its own line */
+}
+
+/* Creates the white dash/line from your image */
+.separator-line {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin-top: 8px; /* Space below "BusBooking" */
+  margin-bottom: 8px; /* Space above "Login" */
+}
+
+/* Styles for the list containing the Login link */
+.custom-navbar ul {
+  list-style-type: disc; /* This creates the black bullet point • */
+  padding-left: 20px; /* Indents the bullet point and link */
+  margin: 0;
+}
+
+/* Style for the "Login" link */
+.login-link {
+  font-size: 1rem;
+}

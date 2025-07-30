@@ -1,0 +1,51 @@
+<!-- src/app/pages/booking-ticket/booking-ticket.component.html -->
+
+<div class="container my-5">
+  <div class="row">
+    <!-- Seat Layout Column -->
+    <div class="col-md-8">
+      <div class="seat-selection-card shadow-sm">
+        <h4 class="card-header">Select Your Seats</h4>
+        <div class="card-body">
+          <div class="seat-layout">
+            <div *ngFor="let seat of seats" 
+                 class="seat"
+                 [ngClass]="{
+                   'booked': seat.IsBooked,
+                   'selected': seat.IsSelected,
+                   'available': !seat.IsBooked && !seat.IsSelected
+                 }"
+                 (click)="selectSeat(seat)">
+              {{ seat.SeatNumber }}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Booking Summary Column -->
+    <div class="col-md-4">
+      <div class="summary-card shadow-sm">
+        <h4 class="card-header">Booking Summary</h4>
+        <div class="card-body">
+          <div class="legend mb-3">
+            <div class="legend-item"><span class="seat available"></span> Available</div>
+            <div class="legend-item"><span class="seat selected"></span> Selected</div>
+            <div class="legend-item"><span class="seat booked"></span> Booked</div>
+          </div>
+          <hr>
+          <div *ngIf="selectedSeats.length > 0">
+            <p><strong>Selected Seats:</strong> {{ getSelectedSeatNumbers() }}</p>
+            <p><strong>Total Fare:</strong> <span class="fw-bold fs-4">₹ {{ totalFare }}</span></p>
+            <div class="d-grid">
+              <button class="btn btn-proceed" (click)="proceedToBooking()">Proceed to Book</button>
+            </div>
+          </div>
+          <div *ngIf="selectedSeats.length === 0" class="text-center text-muted">
+            <p>Please select a seat to continue.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

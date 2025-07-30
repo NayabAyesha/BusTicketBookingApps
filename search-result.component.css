@@ -1,0 +1,50 @@
+/* src/app/pages/search-result/search-result.component.css */
+
+.search-summary {
+  background-color: #f8f9fa;
+  border: 1px solid #dee2e6;
+}
+
+.bus-card {
+  border: none;
+  border-radius: 10px;
+  transition: transform 0.2s;
+}
+
+.bus-card:hover {
+  transform: translateY(-5px);
+}
+
+.card-title {
+  color: #333;
+}
+
+.timeline-line {
+  border-top: 1px dashed #ccc;
+  width: 60px;
+  margin: 5px auto;
+}
+
+.price {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #e53935;
+}
+
+.seats-available {
+  font-size: 0.8rem;
+  color: #28a745;
+  margin-bottom: 5px;
+}
+
+.btn-view-seats {
+  background-color: #1f6868;
+  color: white;
+  border: none;
+  font-weight: 500;
+}
+
+.btn-view-seats:hover {
+  background-color: #428088;
+  color: white;
+}
